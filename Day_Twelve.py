@@ -1,13 +1,13 @@
-#Namespaces: Local vs. Global Scope
+# Namespaces: Local vs. Global Scope
 from random import randint
 
- 
+
 EASY_LEVEL = 10
 HARD_LEVEL = 5
 
 
-def check_answer(guess , answer, turns):
-    """ Pass a guesse number who comaparet to the answer, return a turns - 1 or anything"""
+def check_answer(guess, answer, turns):
+    """Pass a guesse number who comaparet to the answer, return a turns - 1 or anything"""
     if guess > answer:
         print("Too High")
         return turns - 1
@@ -16,14 +16,15 @@ def check_answer(guess , answer, turns):
         return turns - 1
     else:
         print(f"You got it! The  answer is {answer}")
-    
+
+
 def set_difficulty():
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
-    
+
     if difficulty == "easy":
-       return EASY_LEVEL
+        return EASY_LEVEL
     else:
-       return HARD_LEVEL
+        return HARD_LEVEL
 
 
 def game():
@@ -32,7 +33,6 @@ def game():
     answer = randint(1, 100)
 
     turns = set_difficulty()
-    
 
     guess = 0
     while guess != answer:
@@ -46,4 +46,6 @@ def game():
             break
         if guess != answer:
             print("Guess Again")
+
+
 game()

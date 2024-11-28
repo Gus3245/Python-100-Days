@@ -2,7 +2,6 @@
 import math
 from art import logo
 
-
 #Challenge Caeser Cipher ------------------------
 
 print(logo)
